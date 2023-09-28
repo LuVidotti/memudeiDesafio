@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
 })
 
 async function climaTempo(cidade) {
-    const resposta = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&lang=pt_br&APPID=92ed7ea1a311d43e789192f2ef5b5389`);
+    const resposta = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&lang=pt_br&APPID=92ed7ea1a311d43e789192f2ef5b5389`);
     const dados = await resposta.json();
 
     let ventM = dados.wind.speed;
@@ -67,7 +67,7 @@ let capitais = [
 let climaCapitais = []
 
 async function infoCapital(capital) {
-    const resposta = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${capital}&units=metric&lang=pt_br&APPID=92ed7ea1a311d43e789192f2ef5b5389`)
+    const resposta = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&units=metric&lang=pt_br&APPID=92ed7ea1a311d43e789192f2ef5b5389`)
     const dados = await resposta.json();
 
     const novaCapital = {
